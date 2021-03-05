@@ -1,0 +1,246 @@
+ 
+:root{
+        --orange: #F87070;
+        --green: #70F3F8;
+        --purple: #D881F8;
+        --light-blue: #D7E0FF;
+        --dark-blue: #1E213F;
+        --darker-blue:#161932;
+        --white: #FFFFFF;
+        --beige: #EFF1FA;
+}
+
+*{ 
+    /*  Universal Selector remove the default margin and padding*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif; 
+
+}
+/* ------------------------Main tag------------ */
+
+body{
+    background-color: var(--dark-blue);
+}
+
+
+nav {
+    width: 373px;
+    height: 63px;   
+    background-color: var(--darker-blue);
+}
+nav > ul >li {
+    opacity: 0.4;
+    transition: opacity 10ms ease-out;
+}
+
+form {
+    pointer-events: auto;
+    margin: auto;
+    border-radius: 25px;
+    width: 550px;
+    height: 464px;
+    background-color: var(--white);
+
+}
+
+hr {
+    opacity: 0.4;
+}
+
+/* ----------------- Structural ids ------------------*/
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+/* ----- timer ---- */
+#timer{
+
+
+}
+
+#outerCircle {
+    display: flex;
+    height: 410px;
+    width: 410px;
+    border-radius: 50%;
+    background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+    box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+
+}
+
+#innerCircle {
+    display:flex;
+    margin: auto;
+    height: 366px;
+    width: 366px;
+    background-color: var(--darker-blue);
+    border-radius: 50%;
+   
+}
+
+#ring {
+    display: flex;
+    width: 339px;
+    height: 339px;
+    margin: auto;
+    fill: transparent;
+
+}
+#ring > circle {
+    fill: transparent;
+    stroke-width: 10;
+    stroke: var(--orange);
+    /* stroke-dasharray: 50 0; */
+    stroke-dasharray: 50 0;
+
+
+}
+
+#settings {
+    width: 373px;
+    height: 63px;   
+    margin-top: 30px;
+    background-color: var(--light-blue);
+    margin-top: 100px;
+}
+
+#settingContainer {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transition: opacity ease-in 0.2 visibility linear 0.5s;
+
+
+}
+#settingOverlay {
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 12, 28, 0.5);
+    z-index: 100;
+}
+
+#formOuter {
+    pointer-events: none;
+    position: absolute;
+    z-index: 110;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+#settingHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 40px;
+
+}
+
+
+#settingsTime {
+    margin: 020px 0 40px;
+
+}
+ 
+#settingsTime > h4 {
+    display: flex;
+    padding: 25px 0;
+    color: var(--darker-blue);
+}
+
+#settingHeader h2 {
+
+    margin: 0;
+    color: var(--darker-blue);
+}
+
+
+/* ----------utility Classes------------- */
+.center {
+    margin: 0 auto; 
+}
+
+.pointer{
+    user-select: none;
+    cursor: pointer;
+}
+.input {
+    display: flex ;
+    flex-direction: column;
+    width: 140px;
+    margin-right: 20px;
+
+}
+
+.input >label{
+    color: var(--darker-blue);
+    padding-bottom: 10px;   
+    opacity: 40%;
+}
+
+.input  input {
+
+    height: 48px;
+    width: 88px;
+    background-color: var(--beige);
+    border: none;
+    outline: none;
+    color: var(--darker-blue);
+}
+
+/*- hide the ups and downs arrows -*/
+.input input::-webkit-inner-spin-button,
+.input input::-webkit-outer-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.inputNumber {
+    display: flex;
+    background-color: var(--beige);
+    justify-content: space-between;
+    padding: 0 15px;
+    /* //left and right and up and down */
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.inputButtons {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--beige);
+}
+
+.inputButtons button {
+  
+    background-color: var(--beige);
+    border:none;
+    outline: none;
+}
+
+.inputButtons button img {
+    opacity: 25%;
+    transition: opacity 0.2s ease-out;
+}
+
+.inputButtons button img:hover{
+    opacity: 1;
+}
+.inputs{
+    display: flex;;
+}

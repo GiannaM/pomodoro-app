@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Pomodoro app</title>
+</head>
+<body>
+  <div id="wrapper">
+    <h2 class="center">pomodoro</h2>
+    <nav class="center">Nav</nav>
+    <section id="timer" class="center">
+      <div id="outerCircle">
+        <div id ="innerCircle">
+          <svg id="ring" class="center, progress-ring" >
+            <!-- radius = (width / 2) - (strokeWidth * 2) -->
+            <circle class="progress-ring-circle" cx="50%" cy="50%" r="163" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- ---Setting Section -->
+    <section id="settings" class="pointer ">Settings
+      <img src="assets/icon-setting.svg"  class= "pointer" alt="">
+    </section>
+      <section id="settingContainer">
+        <div id="formOuter">
+          <form >
+            <div id="settingHeader">
+              <h2>Settings </h2>
+              <img src="assets/icon-close.svg" class="pointer" id="close"  alt="close"/>
+            </div>
+            <hr/>
+            <div id="settingsTime">
+              <h4>time (minutes</h4>
+              <!-- Pomodoro Input -->
+              <div class="input">
+                <label for="pomodoro" class="body2">Pomodoro</label>
+                <div class="inputNumber">
+                  <div  type = "number" id="pomodoro" value="25" class= "body1" min= "1">
+
+                  </div>
+                  <!-- input buttons -->
+                  <div class="inputButtons">
+                      <button class="upArrow" onclick="inc('pomodoro')">
+                          <img src="assets/icon-arrow-up.svg" alt="">
+                      </button>
+                      <button class="downArrow" onclick="dec('pomodoro')">
+                        <img src="assets/icon-arrow-down.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id ="settingsOverlay"></div>
+      </section>
+  </div>
+
+
+ <script src="js/index.js" ></script>
+</body>
+</html>
