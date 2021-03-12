@@ -1,4 +1,4 @@
- 
+
 :root{
         --orange: #F87070;
         --green: #70F3F8;
@@ -10,22 +10,28 @@
         --beige: #EFF1FA;
 }
 
-*{ 
+*{
     /*  Universal Selector remove the default margin and padding*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Kumbh Sans", sans-serif; 
+
     color: var(--light-blue);
 
 
+
+
+
 }
-/* ------------------------------------------------- 
+
+/* -------------------------------------------------
                         HTML Elements
 --------------------------------------------------- */
 
 body{
     background-color: var(--dark-blue);
+    font-family: "Kumbh Sans", sans-serif;
+
 }
 
 h1 {
@@ -33,6 +39,8 @@ h1 {
     font-size: 100px;
     letter-spacing: 5px;
     line-height: 128px;
+
+
 }
 
 h2 {
@@ -60,7 +68,7 @@ h4 {
 
 nav {
     width: 373px;
-    height: 63px;   
+    height: 63px;
     background-color: var(--darker-blue);
     /* check */
     border-radius: 50px;
@@ -93,8 +101,17 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
 }
+
+
+
+.title {
+}
+
+
 /* ----- timer ---- */
 
 
@@ -115,7 +132,7 @@ hr {
     width: 366px;
     background-color: var(--darker-blue);
     border-radius: 50%;
-   
+
 }
 
 #ring {
@@ -135,7 +152,7 @@ hr {
     stroke-linecap: round;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    
+
 }
 
 #textContainer {
@@ -147,7 +164,7 @@ hr {
 
 #time {
     text-align: center;
-    margin-top: 160px; 
+    margin-top: 160px;
 }
 
 #action {
@@ -157,10 +174,16 @@ hr {
 
 #settings {
     width: 373px;
-    height: 63px;   
-    margin-top: 30px;
-
+    height: 63px;
+    /* margin-top: 30px; */
+/*
     margin-top: 100px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    text-align:  center;
+    
 }
 
 #settingContainer {
@@ -208,7 +231,7 @@ hr {
     margin: 020px 0 40px;
 
 }
- 
+
 #settingsTime > h4 {
     display: flex;
     padding: 25px 0;
@@ -224,7 +247,7 @@ hr {
 
 /* ----------utility Classes------------- */
 .center {
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .pointer{
@@ -241,7 +264,7 @@ hr {
 
 .input >label{
     color: var(--darker-blue);
-    padding-bottom: 10px;   
+    padding-bottom: 10px;
     opacity: 40%;
 }
 
@@ -282,7 +305,7 @@ hr {
 }
 
 .inputButtons button {
-  
+
     background-color: var(--beige);
     border:none;
     outline: none;
