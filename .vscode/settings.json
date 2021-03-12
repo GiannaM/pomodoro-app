@@ -1,0 +1,7 @@
+{
+      "javascript.format.insertSpaceAfterConstructor": true,
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true,
+      "editor.formatOnType": true,
+      "workbench.editor.decorations.colors": true
+}
